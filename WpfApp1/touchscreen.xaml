@@ -6,15 +6,13 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="touchscreen" Height="1080" Width="1920">
-    <Grid>
-        <Grid x:Name="touchscreen_grid"/>
-        <Image HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920" Grid.ColumnSpan="5" Grid.RowSpan="5" Source="/bg.jpg" Stretch="Fill"/>
+    <Grid Name ="touchscreen_grid" Opacity="80">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -23,5 +21,6 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
+        <Image x:Name="touchscreen_background" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920" Source="/bg.jpg" Grid.RowSpan="5" Grid.ColumnSpan="5"/>
     </Grid>
 </Window>

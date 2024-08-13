@@ -11,6 +11,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Text.Json;
+using System.Xml.Linq;
+using System.IO;
+using System.Text.Json.Nodes;
 
 namespace WpfApp1
 {
@@ -21,19 +27,52 @@ namespace WpfApp1
     {
         public touchscreen()
         {
+            int buttons_counter = 0;
             InitializeComponent();
+            buttons_counter = CfgRead();
+            InitializeButtons(buttons_counter);
 
+        }
+        public void InitializeButtons(int buttons_counter)
+        {
+            int count = 1;
+            // i = columns
+            // j = rows
             for (int i = 0; i < 5; i++)
             {
-                System.Windows.Controls.Button newBtn = new Button();
+                for (int j = 0; j < 5; j++)
+                {
+                    System.Windows.Controls.Button touchscreen_button = new System.Windows.Controls.Button();
+                    touchscreen_button.Content = count.ToString();
+                    touchscreen_button.Name = "Button" + count.ToString();
+                    touchscreen_button.Margin = new Thickness(30, 30, 30, 30);
 
-                newBtn.Content = i.ToString();
-                newBtn.Name = "Button" + i.ToString();
+                    Grid.SetColumn(touchscreen_button, j);
+                    Grid.SetRow(touchscreen_button, i);
+                    touchscreen_grid.Children.Add(touchscreen_button);
+                    count++;
 
-                touchscreen_grid.SetValue(Grid.RowProperty, i);
-                touchscreen_grid.SetValue(Grid.ColumnProperty, i);
-                touchscreen_grid.Children.Add(newBtn);
+                    if (count == buttons_counter) break;
+                }
             }
+        }
+
+        public int CfgRead()
+        {
+            StreamReader reader = new StreamReader("cfg.json");
+
+            var jsonCFG = File.ReadAllText("cfg.json");
+            string data = reader.ReadToEnd();
+
+            var jsonObject = JsonNode.Parse(data).AsObject();
+
+            var number = jsonObject["fruit"].AsValue();
+            int cnt = (int)number;
+
+            if (cnt > 25) cnt = 25;
+
+            return cnt;
+            
         }
     }
 }
