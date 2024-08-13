@@ -7,7 +7,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -23,18 +22,18 @@ namespace WpfApp1
         public touchscreen()
         {
             InitializeComponent();
-            CreateButtons();
 
-            Button bt1 = new Button();
+            for (int i = 0; i < 5; i++)
+            {
+                System.Windows.Controls.Button newBtn = new Button();
 
-            bt1.Height = 200;
-            bt1.Width = 100;
-            bt1.Name = "Button_1";
-            bt1.Visibility = Visibility.Visible;
-        }
-        public void CreateButtons()
-        {
+                newBtn.Content = i.ToString();
+                newBtn.Name = "Button" + i.ToString();
 
+                touchscreen_grid.SetValue(Grid.RowProperty, i);
+                touchscreen_grid.SetValue(Grid.ColumnProperty, i);
+                touchscreen_grid.Children.Add(newBtn);
+            }
         }
     }
 }

@@ -18,7 +18,7 @@
                 <GradientStop Color="#FFFF0B0B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <MediaElement HorizontalAlignment="Left" Height="765" Margin="150,117,0,0" VerticalAlignment="Top" Width="1608" Name="contentPlayer" Source="/template.mp4" Opacity="1" LoadedBehavior="Play"/>
+        <MediaElement HorizontalAlignment="Left" Height="765" Margin="150,117,0,0" VerticalAlignment="Top" Width="1608" Name="contentPlayer" Source="/template.mp4" Opacity="1" LoadedBehavior="Manual"/>
 
     </Grid>
 </Window>

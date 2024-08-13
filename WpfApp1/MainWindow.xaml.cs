@@ -27,7 +27,7 @@ namespace WpfApp1
             InitializeComponent();
 
             Screen first = Screen.AllScreens[0];
-            Screen third = Screen.AllScreens[2];
+            Screen third = Screen.AllScreens[1];
             System.Drawing.Rectangle thirdScreen = third.WorkingArea;
             System.Drawing.Rectangle firstScreen = first.WorkingArea;
 
@@ -43,12 +43,37 @@ namespace WpfApp1
             touchS.Show();
             videoS.Show();
 
- 
-            touchS.WindowStyle = WindowStyle.None;
-            touchS.WindowState = WindowState.Maximized;
+            /*
+                       touchS.WindowStyle = WindowStyle.None;
+                       touchS.WindowState = WindowState.Maximized;
 
-            videoS.WindowStyle = WindowStyle.None;
-            videoS.WindowState = WindowState.Maximized;
+                       videoS.WindowStyle = WindowStyle.None;
+                       videoS.WindowState = WindowState.Maximized;
+
+
+            */
+
+            
+
+            int count = 1;
+
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    System.Windows.Controls.Button MyControl1 = new System.Windows.Controls.Button();
+                    MyControl1.Content = count.ToString();
+                    MyControl1.Name = "Button" + count.ToString();
+
+                    Grid.SetColumn(MyControl1, j);
+                    Grid.SetRow(MyControl1, i);
+                    main_window_grid.Children.Add(MyControl1);
+
+                    count++;
+                }
+
+            }
         }
     }
 }

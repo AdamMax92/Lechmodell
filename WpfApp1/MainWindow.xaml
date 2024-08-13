@@ -6,8 +6,19 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1080">
-    <Grid>
-        <TextBox x:Name="StatusMemo" Margin="20,50,20,0" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="300" VerticalScrollBarVisibility="Visible"/>
-
+    <Grid x:Name="main_window_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
     </Grid>
 </Window>
