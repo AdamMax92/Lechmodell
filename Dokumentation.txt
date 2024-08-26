@@ -1,0 +1,14 @@
+Dokumentation
+
+Bildschirm 1 Touchscreen (Vollbild) - immer als primary screen definieren
+Bildschirm 2 Beamer (Vollbild)
+
+Bis zu 25 Buttons auf dem Bildschirm. Anzahl Variabel. Bedeutet, wenn 12 Buttons gewünscht sind, werden auch nur 12 Stück angezeigt. Jeder Button hat einen Namen den man frei wählen und/oder abändern kann. Die Videos haben die Namen Video_1.mp4 ... Video_25.mp4.
+
+Getestete und Erlaubte Formate sind:
+
+- .mp4 mit Codec xxxxx
+- .mp4 mit Codec xxxxx
+
+Das Hintergrundbild des Touchscreens ist austauschbar.
+Die Konfiguration erfolgt über ein .json file

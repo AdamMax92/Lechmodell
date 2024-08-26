@@ -22,12 +22,7 @@ namespace WpfApp1
         public videoplayer()
         {
             InitializeComponent();
-
             Console.WriteLine("Mediaplayer-Class called");
-
-            contentPlayer.LoadedBehavior = MediaState.Manual;
-            contentPlayer.Play();
-
         }
     }
 }

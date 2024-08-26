@@ -6,19 +6,4 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1080">
-    <Grid x:Name="main_window_grid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="150*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-    </Grid>
 </Window>

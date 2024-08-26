@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WpfApp1
 {
@@ -22,52 +24,63 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        touchscreen touchScreen = new touchscreen();
+        videoplayer videoScreen = new videoplayer();
+
         public MainWindow()
         {
+            this.Visibility = Visibility.Hidden;
             InitializeComponent();
+            Init_Screens();
 
-            Screen first_screen = Screen.AllScreens[0];
-            Screen second_screen = Screen.AllScreens[1];
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);   //sekunden timer für videoplayer
+            dispatcherTimer.Start();
 
-            System.Drawing.Rectangle thirdScreen = second_screen.WorkingArea;
+        }
+
+        public void Init_Screens()
+        {
+            Screen first_screen = Screen.AllScreens[touchScreen.screenIdTouch];
+            Screen second_screen = Screen.AllScreens[touchScreen.screenIdVideo];
+
             System.Drawing.Rectangle firstScreen = first_screen.WorkingArea;
+            System.Drawing.Rectangle secondScreen = second_screen.WorkingArea;
 
-            touchscreen touchS = new touchscreen();
-            videoplayer videoS = new videoplayer();
+            videoScreen.Left = firstScreen.Left;
+            touchScreen.Left = secondScreen.Left;
 
-            touchS.WindowStartupLocation = WindowStartupLocation.Manual;
-            videoS.WindowStartupLocation = WindowStartupLocation.Manual;
+            touchScreen.WindowStartupLocation = WindowStartupLocation.Manual;
+            videoScreen.WindowStartupLocation = WindowStartupLocation.Manual;
 
-            touchS.Left = thirdScreen.Left;
-            videoS.Left = firstScreen.Left;
-                        
-            touchS.Show();
-            videoS.Show();
+            touchScreen.Show();
+            videoScreen.Show();
 
-            /*
-                touchS.WindowStyle = WindowStyle.None;
-                touchS.WindowState = WindowState.Maximized;
+            touchScreen.WindowStyle = WindowStyle.None;
+            touchScreen.WindowState = WindowState.Maximized;
 
-                videoS.WindowStyle = WindowStyle.None;
-                videoS.WindowState = WindowState.Maximized;
-            */
+            videoScreen.WindowStyle = WindowStyle.None;
+            videoScreen.WindowState = WindowState.Maximized;
 
-            int count = 1;
-            for (int i = 0; i < 3; i++)
+        }
+        public void Play_Files_Loop(int video_index)
+        {
+            if (touchScreen.which_button_is_pressed != 0)
             {
-                for (int j = 0; j < 3; j++)
-                {
-                    System.Windows.Controls.Button MyControl1 = new System.Windows.Controls.Button();
-                    MyControl1.Content = count.ToString();
-                    MyControl1.Name = "Button" + count.ToString();
+                string path = "video_" + video_index +".mp4";
 
-                    Grid.SetColumn(MyControl1, j);
-                    Grid.SetRow(MyControl1, i);
-                    main_window_grid.Children.Add(MyControl1);
+                videoScreen.contentPlayer.Source = new Uri(path, UriKind.RelativeOrAbsolute);
+                videoScreen.contentPlayer.ScrubbingEnabled = true;
 
-                    count++;
-                }
+                videoScreen.contentPlayer.Play();
+                touchScreen.which_button_is_pressed = 0;
             }
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            Play_Files_Loop(touchScreen.which_button_is_pressed);
         }
     }
 }
