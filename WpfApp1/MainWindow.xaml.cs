@@ -54,6 +54,8 @@ namespace WpfApp1
             touchScreen.WindowStartupLocation = WindowStartupLocation.Manual;
             videoScreen.WindowStartupLocation = WindowStartupLocation.Manual;
 
+            touchScreen.touchscreen_background.Source = new BitmapImage(new Uri("/bg.jpg", UriKind.RelativeOrAbsolute));
+
             touchScreen.Show();
             videoScreen.Show();
 

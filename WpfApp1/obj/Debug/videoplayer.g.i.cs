@@ -60,7 +60,7 @@ namespace WpfApp1 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp1;component/videoplayer.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lechmodell;component/videoplayer.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\videoplayer.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
