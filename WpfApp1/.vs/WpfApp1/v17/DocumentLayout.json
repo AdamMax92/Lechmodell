@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Lechmodell\\WpfApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|D:\\Lechmodell\\WpfApp1\\touchscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|d:\\lechmodell\\wpfapp1\\touchscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|solutionrelative:touchscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|solutionrelative:videoplayer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|d:\\lechmodell\\wpfapp1\\touchscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|D:\\Lechmodell\\WpfApp1\\touchscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{06EA92C8-5C4C-4FEE-85A1-32A71B85C2A3}|WpfApp1.csproj|solutionrelative:touchscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -49,8 +49,7 @@
               "RelativeToolTip": "touchscreen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-08-13T15:04:36.023Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "ToolTip": "C:\\Users\\aax\\AppData\\Local\\Temp\\.vsdbgsrc\\c6a5a7f5f1f891b96e7ce20decdfb3b83d9ea38a008c3e03a9a2dc211cf459f6\\WpfXamlLoader.cs",
               "ViewState": "AQIAAGgAAAAAAAAAAAAiwHcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T11:53:36.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T11:53:36.319Z"
             },
             {
               "$type": "Document",
@@ -73,8 +71,7 @@
               "RelativeToolTip": "videoplayer.xaml.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAiwBgAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T08:11:58.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T08:11:58.601Z"
             },
             {
               "$type": "Document",
@@ -86,8 +83,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAowDcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T15:07:35.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T15:07:35.564Z"
             },
             {
               "$type": "Document",
@@ -98,8 +94,7 @@
               "ToolTip": "D:\\Lechmodell\\WpfApp1\\videoplayer.xaml",
               "RelativeToolTip": "videoplayer.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-26T08:09:36.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T08:09:36.835Z"
             },
             {
               "$type": "Document",
@@ -109,7 +104,7 @@
               "RelativeDocumentMoniker": "touchscreen.xaml.cs",
               "ToolTip": "D:\\Lechmodell\\WpfApp1\\touchscreen.xaml.cs",
               "RelativeToolTip": "touchscreen.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T15:06:47.623Z",
               "EditorCaption": ""
@@ -123,8 +118,7 @@
               "ToolTip": "D:\\Lechmodell\\WpfApp1\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-13T15:10:44.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T15:10:44.698Z"
             }
           ]
         }

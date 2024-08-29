@@ -25,7 +25,6 @@ namespace WpfApp1
     /// </summary>
     /// 
 
-
     public partial class touchscreen : Window
     {
         const int MAXIMUM_OF_BUTTONS = 25;
