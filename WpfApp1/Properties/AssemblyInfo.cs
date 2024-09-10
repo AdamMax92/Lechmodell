@@ -7,12 +7,12 @@ using System.Windows;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("WpfApp1")]
+[assembly: AssemblyTitle("MARS Event Lechmodell")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("BAUER AG")]
-[assembly: AssemblyProduct("WpfApp1")]
-[assembly: AssemblyCopyright("Copyright © BAUER AG 2024")]
+[assembly: AssemblyCompany("MARS Event und Media")]
+[assembly: AssemblyProduct("MARS Event Lechmodell")]
+[assembly: AssemblyCopyright("MARS Event und Media Maximilian Adam")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

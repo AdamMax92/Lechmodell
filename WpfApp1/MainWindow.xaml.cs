@@ -38,6 +38,7 @@ namespace WpfApp1
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);   //sekunden timer für videoplayer
             dispatcherTimer.Start();
 
+            this.PreviewKeyDown += new System.Windows.Input.KeyEventHandler(HandleEsc);
         }
 
         public void Init_Screens()
@@ -83,6 +84,23 @@ namespace WpfApp1
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
             Play_Files_Loop(touchScreen.which_button_is_pressed);
+
+            if (Keyboard.IsKeyDown(Key.F11))
+            {
+                //touchScreen.Close();
+                //videoScreen.Close();
+                //this.Close();
+
+                Environment.Exit(0);
+            }
+        }
+
+        private void HandleEsc(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.F11)
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }
